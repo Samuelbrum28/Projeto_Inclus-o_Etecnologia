@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecnologia Para Todos | Inclusão e Acessibilidade Digital</title>
+  
+  <!-- Importação da Fonte estilo Holland.com (Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Atalho para Teclado -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="badge-live">LIVE CONSCIENTIZAÇÃO</span>
+        <h1 class="logo-title">Tecnologia Para Todos</h1>
+      </div>
+
+      <!-- Barra de Ferramentas Funcionais de Acessibilidade -->
+      <div class="accessibility-toolbar" aria-label="Ferramentas de Acessibilidade">
+        <button id="btn-contrast" type="button" aria-pressed="false">Alto Contraste</button>
+        <button id="btn-increase-font" type="button" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button id="btn-decrease-font" type="button" aria-label="Diminuir tamanho da fonte">A-</button>
+      </div>
+
+      <!-- Navegação -->
+      <nav aria-label="Menu principal">
+        <ul class="nav-links">
+          <li><a href="#apresentacao">Início</a></li>
+          <li><a href="#destaques">Destaques</a></li>
+          <li><a href="#multimidia">Mídias em Destaque</a></li>
+          <li><a href="#equipe">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="conteudo-principal">
+
+    <!-- Hero / Apresentação Editorial -->
+    <section id="apresentacao" class="hero-section">
+      <div class="container hero-content">
+        <span class="tag-category">PROJETO INTEGRADOR</span>
+        <h2>A tecnologia deve ser construída para todas as pessoas.</h2>
+        <p>
+          Uma web verdadeiramente acessível considera diferentes formas de enxergar, ouvir, compreender e navegar. 
+          Entenda como a combinação entre Inteligência Artificial e desenvolvimento consciente elimina barreiras digitais.
+        </p>
+      </div>
+    </section>
+
+    <!-- Destaques Lado a Lado (Estilo Holland.com) -->
+    <section id="destaques" class="features-section">
+      <div class="container">
+        
+        <!-- Bloco 1 -->
+        <article class="feature-card">
+          <div class="feature-image">
+            <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80" 
+                 alt="Equipe diversa colaborando em uma mesa com notebooks">
+          </div>
+          <div class="feature-info">
+            <span class="card-tag">Sociedade & Inclusão</span>
+            <h3>Inclusão Escolar e no Mercado de Trabalho</h3>
+            <p>
+              A verdadeira inclusão digital garante autonomia plena para pessoas com deficiência. 
+              Criar sistemas adaptáveis é um compromisso social com a igualdade de oportunidades.
+            </p>
+          </div>
+        </article>
+
+        <!-- Bloco 2 (Invertido) -->
+        <article class="feature-card reverse">
+          <div class="feature-image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                 alt="Profissional utilizando leitor de tela para navegar no computador">
+          </div>
+          <div class="feature-info">
+            <span class="card-tag">Tecnologia Assistiva</span>
+            <h3>Como a Web se Adapta ao Usuário</h3>
+            <p>
+              Leitores de tela, leitores em Braille e navegadores por comando de voz dependem diretamente de um HTML semântico bem construído para funcionar perfeitamente.
+            </p>
+          </div>
+        </article>
+
+        <!-- Bloco 3 -->
+        <article class="feature-card">
+          <div class="feature-image">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
+                 alt="Estudante utilizando tablet interativo com configurações de acessibilidade">
+          </div>
+          <div class="feature-info">
+            <span class="card-tag">O Futuro da IA</span>
+            <h3>Inteligência Artificial como Aliada</h3>
+            <p>
+              A IA pode gerar legendas e descrições visuais em tempo real, mas exige revisão humana responsável para evitar vieses e garantir precisão.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO MULTIMÍDIA SEPARADA POR BOTÕES SELETORES (VÍDEO / PODCAST) -->
+    <section id="multimidia" class="media-section">
+      <div class="container">
+        <h2 class="section-title">Experiência Multimídia</h2>
+        <p class="section-subtitle">Escolha o formato que deseja assistir ou ouvir abaixo:</p>
+        
+        <!-- Botões de Alternância/Seleção -->
+        <div class="media-selector-tabs">
+          <button id="tab-video-btn" class="media-tab-btn active" type="button" aria-expanded="true">
+             Assistir ao Vídeo
+          </button>
+          <button id="tab-podcast-btn" class="media-tab-btn" type="button" aria-expanded="false">
+             Ouvir o Podcast
+          </button>
+        </div>
+
+        <!-- PAINEL DO VÍDEO (EM TAMANHO EXPANDIDO / GRANDE) -->
+        <div id="panel-video" class="media-panel active">
+          <article class="large-media-card">
+            <div class="media-header">
+              <span class="media-badge"> VÍDEO DE EM Destaque</span>
+              <h3>Navegação por Teclado e Foco Visível</h3>
+            </div>
+            
+            <div class="video-large-wrapper">
+              <video controls poster="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80">
+                <source src="video-demo.mp4" type="video/mp4">
+                Seu navegador não suporta a exibição deste vídeo.
+              </video>
+            </div>
+            
+            <details class="accordion">
+              <summary>Ler transcrição completa do vídeo</summary>
+              <div class="accordion-content">
+                <p><strong>[Narração]:</strong> A acessibilidade digital ajuda pessoas com diferentes necessidades a utilizar sites e aplicativos.</p>
+                <p><strong>[Descrição visual]:</strong> A tela exibe uma página navegada exclusivamente através da tecla TAB. Um indicador de foco laranja destacado percorre sequencialmente os links, menus e botões sem perder o rastreio visual.</p>
+              </div>
+            </details>
+          </article>
+        </div>
+
+        <!-- PAINEL DO PODCAST (SEPARADO) -->
+        <div id="panel-podcast" class="media-panel">
+          <article class="large-media-card">
+            <div class="media-header">
+              <span class="media-badge audio"> PODCAST OFICIAL</span>
+              <h3>Decisões de Código que Removem Barreiras</h3>
+            </div>
+
+            <div class="audio-large-wrapper">
+              <audio controls>
+                <source src="podcast-episodio1.mp3" type="audio/mpeg">
+                Seu navegador não suporta este áudio.
+              </audio>
+            </div>
+
+            <details class="accordion">
+              <summary>Ler transcrição completa do podcast</summary>
+              <div class="accordion-content">
+                <p><strong>Apresentadora:</strong> Hoje vamos conversar sobre como pequenas decisões de desenvolvimento removem barreiras do dia a dia.</p>
+                <p><strong>Convidado:</strong> Começar pela estrutura semântica torna a página mais compreensível para várias tecnologias assistivas. Por exemplo, usar elementos como `<nav>` e `<main>` orienta leitores de tela instantaneamente.</p>
+              </div>
+            </details>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer id="equipe" class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-info">
+        <h3>Tecnologia Para Todos</h3>
+        <p>Projeto Integrador — Tecnologia, IA e Inclusão</p>
+      </div>
+      <p class="conscientizacao-msg">"A acessibilidade não é um recurso adicional; é a estrutura da web livre e democrática."</p>
+      <small>&copy; 2026 Desenvolvido pela Equipe de Impacto Social.</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
