@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tecnologia Para Todos | Inclusão e Acessibilidade Digital</title>
   
-  <!-- Importação da Fonte estilo Holland.com (Plus Jakarta Sans) -->
+  <!-- Fonte no estilo Holland.com (Plus Jakarta Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
+  <!-- Link do estilo CSS corrigido -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
   <!-- Atalho para Teclado -->
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-  <!-- Header -->
+  <!-- Header Superior Fixo -->
   <header class="site-header">
     <div class="header-container">
       <div class="brand">
@@ -25,31 +26,34 @@
         <h1 class="logo-title">Tecnologia Para Todos</h1>
       </div>
 
-      <!-- Barra de Ferramentas Funcionais de Acessibilidade -->
-      <div class="accessibility-toolbar" aria-label="Ferramentas de Acessibilidade">
-        <button id="btn-contrast" type="button" aria-pressed="false">Alto Contraste</button>
-        <button id="btn-increase-font" type="button" aria-label="Aumentar tamanho da fonte">A+</button>
-        <button id="btn-decrease-font" type="button" aria-label="Diminuir tamanho da fonte">A-</button>
-      </div>
-
-      <!-- Navegação -->
+      <!-- Navegação Superior -->
       <nav aria-label="Menu principal">
         <ul class="nav-links">
           <li><a href="#apresentacao">Início</a></li>
           <li><a href="#destaques">Destaques</a></li>
-          <li><a href="#multimidia">Mídias em Destaque</a></li>
+          <li><a href="#multimidia">Mídias</a></li>
           <li><a href="#equipe">Sobre</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Conteúdo Principal -->
-  <main id="conteudo-principal">
+  <!-- HERO BANNER NO TOPO COM IMAGEM/VÍDEO DE FUNDO -->
+  <section id="apresentacao" class="hero-banner">
+    <div class="hero-media-bg">
+      <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80" alt="Pessoas colaborando em um ambiente moderno e acessível">
+      <div class="hero-overlay"></div>
+    </div>
 
-    <!-- Hero / Apresentação Editorial -->
-    <section id="apresentacao" class="hero-section">
-      <div class="container hero-content">
+    <div class="hero-content-wrapper">
+      <!-- Botões de Acessibilidade posicionados na Hero -->
+      <div class="accessibility-toolbar" aria-label="Ferramentas de Acessibilidade">
+        <button id="btn-contrast" type="button" aria-pressed="false">Alto Contraste</button>
+        <button id="btn-increase-font" type="button" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button id="btn-decrease-font" type="button" aria-label="Diminuir tamanho da fonte">A-</button>
+      </div>
+
+      <div class="hero-text">
         <span class="tag-category">PROJETO INTEGRADOR</span>
         <h2>A tecnologia deve ser construída para todas as pessoas.</h2>
         <p>
@@ -57,13 +61,17 @@
           Entenda como a combinação entre Inteligência Artificial e desenvolvimento consciente elimina barreiras digitais.
         </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Destaques Lado a Lado (Estilo Holland.com) -->
+  <!-- Conteúdo Principal -->
+  <main id="conteudo-principal">
+
+    <!-- Destaques Lado a Lado (Imagens originais mantidas) -->
     <section id="destaques" class="features-section">
       <div class="container">
         
-        <!-- Bloco 1 -->
+        <!-- Card 1 -->
         <article class="feature-card">
           <div class="feature-image">
             <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80" 
@@ -79,7 +87,7 @@
           </div>
         </article>
 
-        <!-- Bloco 2 (Invertido) -->
+        <!-- Card 2 (Invertido) -->
         <article class="feature-card reverse">
           <div class="feature-image">
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
@@ -94,7 +102,7 @@
           </div>
         </article>
 
-        <!-- Bloco 3 -->
+        <!-- Card 3 -->
         <article class="feature-card">
           <div class="feature-image">
             <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
@@ -112,13 +120,13 @@
       </div>
     </section>
 
-    <!-- SEÇÃO MULTIMÍDIA SEPARADA POR BOTÕES SELETORES (VÍDEO / PODCAST) -->
+    <!-- SEÇÃO MULTIMÍDIA COM ABAS (VÍDEO E PODCAST SEPARADOS) -->
     <section id="multimidia" class="media-section">
       <div class="container">
         <h2 class="section-title">Experiência Multimídia</h2>
         <p class="section-subtitle">Escolha o formato que deseja assistir ou ouvir abaixo:</p>
         
-        <!-- Botões de Alternância/Seleção -->
+        <!-- Botões de Seleção -->
         <div class="media-selector-tabs">
           <button id="tab-video-btn" class="media-tab-btn active" type="button" aria-expanded="true">
              Assistir ao Vídeo
@@ -128,17 +136,17 @@
           </button>
         </div>
 
-        <!-- PAINEL DO VÍDEO (EM TAMANHO EXPANDIDO / GRANDE) -->
+        <!-- Painel do Vídeo -->
         <div id="panel-video" class="media-panel active">
           <article class="large-media-card">
             <div class="media-header">
-              <span class="media-badge"> VÍDEO DE EM Destaque</span>
+              <span class="media-badge">VÍDEO EM DESTAQUE</span>
               <h3>Navegação por Teclado e Foco Visível</h3>
             </div>
             
             <div class="video-large-wrapper">
               <video controls poster="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80">
-                <source src="video-demo.mp4" type="video/mp4">
+                <source src="assets/media/video-demo.mp4" type="video/mp4">
                 Seu navegador não suporta a exibição deste vídeo.
               </video>
             </div>
@@ -147,23 +155,23 @@
               <summary>Ler transcrição completa do vídeo</summary>
               <div class="accordion-content">
                 <p><strong>[Narração]:</strong> A acessibilidade digital ajuda pessoas com diferentes necessidades a utilizar sites e aplicativos.</p>
-                <p><strong>[Descrição visual]:</strong> A tela exibe uma página navegada exclusivamente através da tecla TAB. Um indicador de foco laranja destacado percorre sequencialmente os links, menus e botões sem perder o rastreio visual.</p>
+                <p><strong>[Descrição visual]:</strong> A tela exibe uma página navegada exclusivamente através da tecla TAB com indicador visual em laranja.</p>
               </div>
             </details>
           </article>
         </div>
 
-        <!-- PAINEL DO PODCAST (SEPARADO) -->
+        <!-- Painel do Podcast -->
         <div id="panel-podcast" class="media-panel">
           <article class="large-media-card">
             <div class="media-header">
-              <span class="media-badge audio"> PODCAST OFICIAL</span>
+              <span class="media-badge audio">PODCAST OFICIAL</span>
               <h3>Decisões de Código que Removem Barreiras</h3>
             </div>
 
             <div class="audio-large-wrapper">
               <audio controls>
-                <source src="podcast-episodio1.mp3" type="audio/mpeg">
+                <source src="assets/media/podcast-episodio1.mp3" type="audio/mpeg">
                 Seu navegador não suporta este áudio.
               </audio>
             </div>
@@ -172,7 +180,7 @@
               <summary>Ler transcrição completa do podcast</summary>
               <div class="accordion-content">
                 <p><strong>Apresentadora:</strong> Hoje vamos conversar sobre como pequenas decisões de desenvolvimento removem barreiras do dia a dia.</p>
-                <p><strong>Convidado:</strong> Começar pela estrutura semântica torna a página mais compreensível para várias tecnologias assistivas. Por exemplo, usar elementos como `<nav>` e `<main>` orienta leitores de tela instantaneamente.</p>
+                <p><strong>Convidado:</strong> Começar pela estrutura semântica torna a página mais compreensível para várias tecnologias assistivas.</p>
               </div>
             </details>
           </article>
@@ -195,6 +203,7 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- Link do script JS corrigido -->
+  <script src="script.js"></script>
 </body>
 </html>
